@@ -60,7 +60,7 @@ void job(double inc_in) {
     };
     args.add_stop_condition(StepSlice(any_ejection, 10));*/
 
-    args.add_stop_condition(StepSlice(DefaultWriter(file_name), 50));
+    args.add_operation(StepSlice(DefaultWriter(file_name), 50));
 
     sim.run(args);
 }
